@@ -1,0 +1,21 @@
+{
+    "course_list": [
+        "320 - Algorithm and Complexity - (c)",
+        "322 - A Modern Programming Language - (e)",
+        "324 - Formal Methods in Software Development - (e)",
+        "326 - Introduction to Compiler Construction - (c)",
+        "327 - Net-Centric Computing - (c)",
+        "328 - Introduction to Theory of Computing - (c)"
+    ]
+}
+
+{
+    "approved_names": [
+        "ebi-fredrick",
+        "thannwa",
+        "olubo",
+        "ojutalayo",
+        "adeniji",
+        "lawal"],
+    "done": []
+}
