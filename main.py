@@ -72,7 +72,7 @@ def validate():
 
     """
 
-    oruko_idile = st.session_state.last_name.lower()
+    oruko_idile = st.session_state.last_name
     print("in func now", oruko_idile)
     if oruko_idile in done:
         st.session_state.validation_message = (f"### **REST!**\n✅ You have been assigned a course already | "
@@ -80,7 +80,7 @@ def validate():
         st.session_state.approved = False
     elif oruko_idile not in approved_names:
         st.session_state.validation_message = ("### 🚫 **Not approved!**\n"
-                                               "Ensure your surname is correct or contact the app creator.")
+                                               "Ensure your surname/lastname is correct or contact the app creator.")
         st.session_state.approved = False
     else:
         st.session_state.approved = True
@@ -214,9 +214,9 @@ st.markdown(welcome_text)
 # Create name input fields and submit button
 col1, col2 = st.columns(2)
 with col1:
-    st.session_state.first_name = st.text_input(label="Firstname", placeholder="Please input your firstname").strip()
+    st.session_state.first_name = st.text_input(label="Firstname", placeholder="Please input your firstname").lower().strip()
 with col2:
-   st.session_state.last_name = st.text_input(label="Lastname", placeholder="Please input your surname").strip()
+   st.session_state.last_name = st.text_input(label="Lastname", placeholder="Please input your surname").lower().strip()
 st.button(label="Submit for validation", on_click=validate)
 
 # Display result of validation test
